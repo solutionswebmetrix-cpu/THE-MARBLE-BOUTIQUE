@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-button: 'Montserrat', sans-serif;
+
+  --color-ink: #1A1A1A;
+  --color-emerald: #0F5C4D;
+  --color-emerald-dark: #083D34;
+  --color-gold: #C8A646;
+  --color-emerald-light: #EAF5F2;
+  --color-soft: #FCFCF8;
+}
+
+:root {
+  --emerald: #0F5C4D;
+  --emerald-dark: #083D34;
+  --gold: #C8A646;
+  --ink: #1A1A1A;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FCFCF8;
+  color: #1A1A1A;
+  overflow-x: hidden;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF5F2;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0F5C4D, #C8A646);
+  border-radius: 4px;
+}
+
+::selection {
+  background: #C8A646;
+  color: #083D34;
+}
+
+/* Font helpers */
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+.font-body {
+  font-family: 'Poppins', sans-serif;
+}
+.font-button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Luxury gradient text */
+.text-gold-gradient {
+  background: linear-gradient(120deg, #EAF5F2 0%, #C8A646 35%, #0F5C4D 70%, #C8A646 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(15, 92, 77, 0.12);
+}
+.glass-dark {
+  background: rgba(8, 61, 52, 0.78);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(200, 166, 70, 0.18);
+}
+.glass-light {
+  background: rgba(234, 245, 242, 0.9);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(8, 61, 52, 0.08);
+}
+
+/* Gold hairline */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C8A646, transparent);
+}
+
+/* Magnetic button base */
+.magnetic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Shine sweep */
+.shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.32) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.shine:hover::after {
+  left: 125%;
+}
+
+/* Reveal mask */
+.reveal-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Floating dust */
+@keyframes float-dust {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
+/* Slow spin */
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(15, 92, 77, 0.18); }
+  50% { box-shadow: 0 0 40px rgba(15, 92, 77, 0.28); }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.cursor-ring.cursor-grow {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: -1.75rem;
+  border-color: rgba(15, 92, 77, 0.92);
+  background: rgba(15, 92, 77, 0.08);
+}
