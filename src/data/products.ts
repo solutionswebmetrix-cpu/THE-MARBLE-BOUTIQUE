@@ -4,6 +4,12 @@ const productImages = import.meta.glob('@/assets/product/*', {
   import: 'default',
 }) as Record<string, string>;
 
+const naturalStoneImages = import.meta.glob('@/assets/*', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}) as Record<string, string>;
+
 export type CategorySlug =
   | 'natural-stones'
   | 'marble-architectural-products'
@@ -14,7 +20,7 @@ export type CategorySlug =
 
 export type CategoryName =
   | 'Natural Stones'
-  | 'Marble Architectural Products'
+  | 'Marble Architectural & Building Products'
   | 'Home & Interior Products'
   | 'Temple & Religious Products'
   | 'Garden & Outdoor Products'
@@ -60,7 +66,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
     slug: 'marble-architectural-products',
     order: 2,
-    name: 'Marble Architectural Products',
+    name: 'Marble Architectural & Building Products',
     shortName: 'Architectural',
     heroTitle: 'Marble Architectural Elements',
     description:
@@ -146,9 +152,67 @@ export const CATEGORY_ORDER: CategorySlug[] = PRODUCT_CATEGORIES
 
 const DEFAULT_IMG = Object.values(productImages)[0] || '';
 
-const ALL_IMAGES_SRC: { path: string; src: string }[] = Object.entries(productImages)
+const ALL_IMAGES_SRC: { path: string; src: string }[] = Object.entries({
+  ...naturalStoneImages,
+  ...productImages,
+})
   .filter(([p]) => !/^banner[-_]/i.test(p.split('/').pop() || p))
   .map(([path, src]) => ({ path: path.toLowerCase(), src }));
+
+const EXACT_PRODUCT_ASSETS: Record<string, string> = {
+  Marble: 'Indian Marble.png',
+  Granite: 'Granite.png',
+  Sandstone: 'Travertine.png',
+  Limestone: 'Travertine.png',
+  Travertine: 'Travertine.png',
+  'Onyx Marble': 'Onyx.png',
+  Quartzite: 'Quartz Stone.png',
+  'Slate Stone': 'Black Marble.png',
+  'Marble Blocks': 'Marble Blocks.png',
+  'Marble Wall Cladding': 'Marble Wall Cladding.png',
+  'Marble Jali': 'Marble Jali.png',
+  'Marble Columns': 'Marble Columns.png',
+  'Marble Domes': 'Marble Domes.png',
+  'Marble Balustrade': 'Marble Balustrade.png',
+  'Marble Mandir / Temple Work': 'Marble Mandir  Temple Work.png',
+  'Marble Gazebo': 'Marble Gazebo.png',
+  'Marble Pavilions': 'Marble Pavilions.png',
+  'Marble Facade / Exterior Cladding': 'Marble Facade  Exterior Cladding.png',
+  'Marble Dining Table': 'Marble Dining Table.png',
+  'Marble Coffee Table': 'Marble Coffee Table.png',
+  'Marble Center Table': 'Marble Center Table.png',
+  'Marble Side Table': 'Marble Side Table.png',
+  'Marble Console Table': 'Marble Console table.png',
+  'Marble Wash Basin': 'Marble Wash Basin.png',
+  'Marble Bathtub': 'Marble Bathtub.png',
+  'Marble Fireplace': 'Marble Fireplace.png',
+  'Marble Planters': 'Marble Planters.png',
+  'Marble Candle Holders': 'Marble Candle Holders.png',
+  'Marble Decorative Items': 'Marble Decorative Items.png',
+  'Home Marble Temple': 'Home Marble Temple.png',
+  'Exterior Marble Temple': 'Exterior Marble Temple.png',
+  'Marble Statue': 'Marble Statue.png',
+  'Marble God Idols': 'Marble God Idols.png',
+  'Marble Pooja Room': 'Marble Pooja Room.png',
+  'Marble Carved Doors': 'Marble Carved Doors.png',
+  'Marble Yantra & Decorative Panels': 'Marble Yantra & Decorative Panels.png',
+  'Marble Fountain': 'Marble Fountain.png',
+  'Marble Water Feature': 'Marble Water Feature.png',
+  'Marble Benches': 'Marble Benches.png',
+  'Marble Garden Chairs': 'Marble Garden Chairs.png',
+  'Marble Bird Bath': 'Marble Bird Bath.png',
+  'Marble Outdoor Tables': 'Marble Outdoor Tables.png',
+  'Marble Landscaping Stones': 'Marble Landscaping Stones.png',
+  'Hand Carved Marble': 'Hand Carved Marble.png',
+  'Stone Carving Art': 'Stone Carving Art.png',
+  'Marble Sculptures': 'Marble Sculptures.png',
+  'Marble Animal Figures': 'Marble Animal Figures.png',
+};
+
+function imageForExact(filename: string): string | undefined {
+  const normalizedFilename = filename.toLowerCase();
+  return ALL_IMAGES_SRC.find((asset) => asset.path.endsWith(`/${normalizedFilename}`))?.src;
+}
 
 function imageFor(keys: string[], index = 0): string {
   const normalizedKeys = keys.map((key) => key.toLowerCase());
@@ -241,7 +305,8 @@ function buildProductImages() {
 
   for (const def of PRODUCT_DEFS) {
     const filename = `${def.slug}.webp`;
-    const src = imageFor(def.imageKeys, def.imageIndex ?? 0);
+    const src = imageForExact(EXACT_PRODUCT_ASSETS[def.name])
+      ?? imageFor(def.imageKeys, def.imageIndex ?? 0);
     const product: ProductImage = {
       id: def.id,
       filename,
