@@ -4,7 +4,6 @@ import CustomCursor from '@/components/CustomCursor';
 import Loader from '@/components/Loader';
 import Header from '@/components/Header';
 import Hero from '@/sections/Hero';
-import Trust from '@/sections/Trust';
 import Marquee from '@/sections/Marquee';
 import About from '@/sections/About';
 import Collection from '@/sections/Collection';
@@ -53,7 +52,6 @@ function HomeSections() {
   return (
     <main>
       <Hero />
-      <Trust />
       <Marquee />
       <About />
       <Collection />
