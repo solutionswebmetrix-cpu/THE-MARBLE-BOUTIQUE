@@ -8,7 +8,6 @@ import whiteMarbleImg from '../assets/White Marble.png';
 import blackMarbleImg from '../assets/Black Marble.png';
 import statuarioImg from '../assets/Statuario.png';
 import onyxImg from '../assets/Onyx.png';
-import travertineImg from '../assets/Travertine.png';
 
 import luxuryLivingRoomsImg from '../assets/Luxury Bathrooms.png';
 import luxuryBathroomsImg from '../assets/Luxury Bathrooms.png';
@@ -52,7 +51,7 @@ export const HERO_CONTENT = {
   headlineA: 'Curated Marble,',
   headlineB: 'Crafted Into Eternity.',
   paragraph:
-    'The Marble Boutique curates the world\u2019s most extraordinary natural stones \u2014 rare Italian marbles, heritage Indian quarries, semi-precious onyx, volcanic granite, and timeless travertine \u2014 and transforms them into bespoke architectural statements that breathe life into luxury residences, hospitality icons, cultural institutions, and private heritage sites across the globe. Every slab we source is personally inspected at origin, vetted against international quality benchmarks, and matched to its perfect application by a team of master geologists, designers, and artisans whose average experience spans three generations of stonemasonry. From the luminous whites of Makrana to the dramatic veins of Calacatta and Statuario, each slab is book-matched, calibrated, and finished by hand so that the final surface reads as a single continuous composition \u2014 flowing from foyer to stairway, from reception desk to lobby, from temple sanctum to rooftop terrace. Our studio marries heritage handcraft with industrial rigor \u2014 diamond CNC precision \u2014 delivering works that age gracefully across centuries.',
+    'The Marble Boutique curates the world\u2019s most extraordinary natural stones \u2014 rare Italian marbles, heritage Indian quarries, semi-precious onyx, volcanic granite, and enduring sandstone \u2014 and transforms them into bespoke architectural statements that breathe life into luxury residences, hospitality icons, cultural institutions, and private heritage sites across the globe. Every slab we source is personally inspected at origin, vetted against international quality benchmarks, and matched to its perfect application by a team of master geologists, designers, and artisans whose average experience spans three generations of stonemasonry. From the luminous whites of Makrana to the dramatic veins of Calacatta and Statuario, each slab is book-matched, calibrated, and finished by hand so that the final surface reads as a single continuous composition \u2014 flowing from foyer to stairway, from reception desk to lobby, from temple sanctum to rooftop terrace. Our studio marries heritage handcraft with industrial rigor \u2014 diamond CNC precision \u2014 delivering works that age gracefully across centuries.',
   ctaPrimary: 'Explore Our Collection',
   ctaSecondary: 'View Our Projects',
 };
@@ -103,11 +102,6 @@ export const COLLECTION = [
     desc: 'Translucent onyx \u2014 a true masterpiece of geological time. Formed over millennia in cave mouths, onyx carries bands of amber, honey, jade, rose, and midnight teal that glow softly when backlit to create feature walls, bar fronts, reception desks, and sculptural pieces that behave like living, breathing, luminous installations. Our onyx is quarried in Turkey, Iran, and Mexico; every block is sawn to our exacting bookmatch pairs to ensure flawless continuity across the full project run. Backlit onyx elevates hospitality design to immersive sensory lighting experiences that make any interior unforgettable. Available in polished, honed, and bookmatch slabs in thicknesses from 20mm to 40mm and custom bookmatched on request. A true statement, unmatched anywhere else.',
     img: onyxImg,
   },
-  {
-    name: 'Travertine',
-    desc: 'Warm, classical travertine \u2014 the stone of Roman aqueducts and California modern villas \u2014 now refreshed for the 21st century luxury home and hospitality design. Our travertine arrives from Turkey and Italy, filled and honed, unfilled and brushed, crosscut or vein-cut so that every surface reads soft, warm, contemporary, and timelessly European. Perfect for exterior cladding, flooring, pool decks, driveways, fireplaces, and resort villas and terracing with rusticated finish, and every application where Mediterranean warmth and contemporary minimalism converge. Light ivory, soft walnut, noce browns, and silvers are stocked in large format calibrated tiles and slabs ready for immediate dispatch pan-India, and supplied fully sealed with factory-filled and unfilled finishes that last lifetimes.',
-    img: travertineImg,
-  },
 ];
 
 export const APPLICATIONS = [
@@ -138,7 +132,7 @@ export const APPLICATIONS = [
   },
   {
     name: 'Wall Cladding',
-    desc: 'Monolithic wall cladding in marble, granite, travertine, limestone, sandstone, and onyx that transforms simple planes into architectural canvases. Exterior rainscreen facades, interior accent walls, feature fireplace stacks, lobby feature planes, lift lobbies, column wraps, and heritage restoration projects where precision rainscreen stone anchors are tested for wind loads and seismic performance. Supplied in mechanical anchorage, adhesive, and mixed anchor systems all per IS and BS 8298-1.2015 British standards for long-life certified cladding performance pan-India and export to all environments.',
+    desc: 'Monolithic wall cladding in marble, granite, limestone, sandstone, and onyx that transforms simple planes into architectural canvases. Exterior rainscreen facades, interior accent walls, feature fireplace stacks, lobby feature planes, lift lobbies, column wraps, and heritage restoration projects where precision rainscreen stone anchors are tested for wind loads and seismic performance. Supplied in mechanical anchorage, adhesive, and mixed anchor systems all per IS and BS 8298-1.2015 British standards for long-life certified cladding performance pan-India and export to all environments.',
     img: wallCladdingImg,
   },
   {
@@ -158,7 +152,7 @@ export const APPLICATIONS = [
   },
   {
     name: 'Swimming Pool Areas',
-    desc: 'Swimming pool decks, infinity edges, infinity decks, lounge stone-coped, and thermal-treated stone around your oasis. White marbles, tumbled travertine, thermal granites, and anti-slip-finished pavers for pools. Non-slip finishes, calibrated for thermal shock-tested to withstand repeated freeze-thaw, UV, and chlorinated water. Copings, overflow channels, drains, infinity edges, swim-up bar cladding, spa benches, poolside bar counters, and showers in a seamless, decking systems that resist long-term UV, chemical attack and salt chlorinated performance. Wet-footing design, design-coped perimeter details, slip-resistance certifications.',
+    desc: 'Swimming pool decks, infinity edges, infinity decks, lounge stone-coped, and thermal-treated stone around your oasis. White marbles, textured sandstone, thermal granites, and anti-slip-finished pavers for pools. Non-slip finishes, calibrated for thermal shock-tested to withstand repeated freeze-thaw, UV, and chlorinated water. Copings, overflow channels, drains, infinity edges, swim-up bar cladding, spa benches, poolside bar counters, and showers in a seamless, decking systems that resist long-term UV, chemical attack and salt chlorinated performance. Wet-footing design, design-coped perimeter details, slip-resistance certifications.',
     img: swimmingPoolAreasImg,
   },
 ];
@@ -189,8 +183,8 @@ export const PROJECTS = [
   { name: 'The Royal Hotel', category: 'Hotels', span: '', img: hotelLobbiesImg, desc: 'A 220-key five-star hotel lobby, all-day dining, presidential suite, and signature spa in bookmatched onyx bar, heritage Indian heritage marble flooring, hand-railed reception desks, feature walls, and cantilevered helical staircase in Italian Statuario cladded entirely with fully specified under a 12-month phased execution, handed over defect-free, with defect, with five, defect-free handover and zero-snag list. Completed for the city\u2019s most anticipated hospitality opening.' },
   { name: 'Corporate Tower', category: 'Corporate Offices', span: '', img: commercialBuildingsImg, desc: 'The headquarters of a Fortune 500 conglomerate, delivering the 25-storey, lobby, boardroom table, boardroom, executive floors, reception desks, and executive lounge granite and black marble. Delivered in 180,000 sq. ft., under strict PMC managed using advanced rainscreen cladding, external granite, GRIHA and LEED Platinum certified performance slip resistance tested.' },
   { name: 'Heritage Temple', category: 'Temples', span: 'lg:row-span-2', img: templeDesignsImg, desc: 'A public temple of 12,000 sq. ft., built in traditional Nagara style architecture, hand-carved pillars, shikhars, jalis, inlaid marble, and temple carvings, rangolis and padukas in Makrana white marble. The temple complex comprises 64 hand-carved pillars, intricate pietra dura pietra-dura panels by master stonemasons, delivered across 24 months end-to-end and was consecrated with traditional ceremonies.' },
-  { name: 'Private Estate', category: 'Luxury Homes', span: '', img: italianMarbleImg, desc: 'An exclusive private hillside estate residence, entire floors, outdoor terracing, infinity pool copings, bespoke travertine deck, pergola flooring, and bespoke sculptural cantilevered staircase, indoor-outdoor stone exterior cladded feature walls executed. in Italian marbles and Turkish travertine, fully specified landscape specified under a fully specified landscape architecture, fully site managed by our PMO. Built for a prominent industrialist family.' },
-  { name: 'Green Farmhouse', category: 'Farmhouses', span: '', img: travertineImg, desc: 'A weekend farmhouse and resort-style villa, fully executed in vein cut travertine, limestone, and thermal finish sandstone external works. exterior cladding, pergola work, driveway cobbles, driveways, terraces, decks, pool edges infinity pool coping, kitchen counters, and an open-air pavilions delivered turnkey delivered under 8 months of end-to-end turnkey.' },
+  { name: 'Private Estate', category: 'Luxury Homes', span: '', img: italianMarbleImg, desc: 'An exclusive private hillside estate residence, entire floors, outdoor terracing, infinity pool copings, bespoke sandstone deck, pergola flooring, and bespoke sculptural cantilevered staircase, indoor-outdoor stone exterior cladded feature walls executed in Italian marbles and sandstone, fully specified landscape architecture, fully site managed by our PMO. Built for a prominent industrialist family.' },
+  { name: 'Green Farmhouse', category: 'Farmhouses', span: '', img: villaFlooringImg, desc: 'A weekend farmhouse and resort-style villa, fully executed in limestone and thermal finish sandstone external works. Exterior cladding, pergola work, driveway cobbles, driveways, terraces, decks, pool edges, infinity pool coping, kitchen counters, and open-air pavilions delivered turnkey under 8 months of end-to-end project management.' },
   { name: 'Business Plaza', category: 'Commercial Buildings', span: '', img: statuarioImg, desc: 'A high-street mixed-use business plaza and retail high street retail arcade, statuario marble lobby, lift, fully supplied & installed statuario polished floors and wall cladding. 80,000 sq. ft. under strict retail floors delivered and installed under two phases over a 10-month window.' },
 ];
 
@@ -211,10 +205,10 @@ export const GALLERY = [
   { img: templeDesignsImg, tall: false, alt: 'Marble temple architecture' },
   { img: onyxImg, tall: true, alt: 'Onyx stone feature' },
   { img: blackMarbleImg, tall: false, alt: 'Black marble wall' },
-  { img: travertineImg, tall: false, alt: 'Swimming pool marble deck' },
+  { img: villaFlooringImg, tall: false, alt: 'Swimming pool marble deck' },
   { img: graniteImg, tall: true, alt: 'Granite surface' },
   { img: importedMarbleImg, tall: false, alt: 'Luxury living room marble' },
-  { img: wallCladdingImg, tall: false, alt: 'Travertine farmhouse flooring' },
+  { img: wallCladdingImg, tall: false, alt: 'Stone farmhouse flooring' },
 ];
 
 export const FAQ_CONTENT = {
@@ -410,7 +404,7 @@ export const CATEGORY_INTRO: Record<string, { headline: string; paragraph: strin
   landscaping: {
     headline: 'Landscape Stone \u2014 Your Garden, Courtyard & Estate In Natural Stone',
     paragraph:
-      'Beautiful homes extend outwards. Our landscaping stone category brings together cobbles, tuscan-travertine copings, sandstone paving, kerbs, steps, driveways, fountains, pergolas, planters, benches, bollards, and decorative objects in every outdoor stone. Natural stone that is as comfortable outdoors for terrace gardens, infinity pool edges, driveway aprons, landscaping stone is engineered to withstand the harshest weathering, the most sun UV, the most intense summer monsoon cycle of the most and still look they do the day day one after thirty years of indian outdoor weather conditions without decay, weathers beautifully with age develops an aged patina that grows only grows with,',
+      'Beautiful homes extend outwards. Our landscaping stone category brings together cobbles, sandstone copings, sandstone paving, kerbs, steps, driveways, fountains, pergolas, planters, benches, bollards, and decorative objects in every outdoor stone. Natural stone that is as comfortable outdoors for terrace gardens, infinity pool edges, driveway aprons, landscaping stone is engineered to withstand the harshest weathering, the most sun UV, the most intense summer monsoon cycle of the most and still look they do the day day one after thirty years of indian outdoor weather conditions without decay, weathers beautifully with age develops an aged patina that grows only grows with,',
     quality:
       'Weatherproof, UV-stable, non-frost, low-absorption landscaping stone, density tested, slip-resistant classified as per IS, ASTM and ASTM C1535 and BS Standards.',
     applications: [

@@ -6,7 +6,7 @@ const WORDS = [
   'Custom Carving',
   'Quartz',
   'Calacatta',
-  'Travertine',
+  'Sandstone',
   'Temples',
   'Fireplaces',
 ];

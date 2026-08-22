@@ -54,9 +54,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     shortName: 'Natural Stones',
     heroTitle: 'Premium Natural Stone Collection',
     description:
-      'A curated spectrum of the earth\'s most enduring natural stones — from the luminous veins of premium marble and crystalline depth of granite, to the warm earthiness of sandstone, timeless limestone, classic travertine, translucent onyx marble, rugged quartzite, and textured slate. Each selection is quarried from heritage deposits, geologically inspected, and hand-finished to bring permanent, authentic beauty to every architectural and interior application.',
+      'A curated spectrum of the earth\'s most enduring natural stones — from the luminous veins of premium marble and crystalline depth of granite, to the warm earthiness of sandstone and timeless limestone. Each selection is quarried from heritage deposits, geologically inspected, and hand-finished to bring permanent, authentic beauty to every architectural and interior application.',
     features: [
-      '8 distinct natural stone families in stock',
+      '4 distinct natural stone families in stock',
       'Indian heritage + premium imported selections',
       'Polished, honed, flamed & leathered finishes',
       'Custom slab and tile sizing available',
@@ -162,12 +162,8 @@ const ALL_IMAGES_SRC: { path: string; src: string }[] = Object.entries({
 const EXACT_PRODUCT_ASSETS: Record<string, string> = {
   Marble: 'Indian Marble.png',
   Granite: 'Granite.png',
-  Sandstone: 'Travertine.png',
-  Limestone: 'Travertine.png',
-  Travertine: 'Travertine.png',
-  'Onyx Marble': 'Onyx.png',
-  Quartzite: 'Quartz Stone.png',
-  'Slate Stone': 'Black Marble.png',
+  Sandstone: 'Indian Marble.png',
+  Limestone: 'White Marble.png',
   'Marble Blocks': 'Marble Blocks.png',
   'Marble Wall Cladding': 'Marble Wall Cladding.png',
   'Marble Jali': 'Marble Jali.png',
@@ -246,11 +242,6 @@ const PRODUCT_DEFS: ProductDef[] = [
   { id: 'p-002', name: 'Granite', slug: 'granite', category: 'natural-stones', imageKeys: ['granite', 'black galaxy', 'kashmir', 'absolute'] },
   { id: 'p-003', name: 'Sandstone', slug: 'sandstone', category: 'natural-stones', imageKeys: ['sandstone', 'teak', 'pink', 'mint'] },
   { id: 'p-004', name: 'Limestone', slug: 'limestone', category: 'natural-stones', imageKeys: ['limestone', 'kota', 'gold'] },
-  { id: 'p-005', name: 'Travertine', slug: 'travertine', category: 'natural-stones', imageKeys: ['travertine', 'marble'] },
-  { id: 'p-006', name: 'Onyx Marble', slug: 'onyx-marble', category: 'natural-stones', imageKeys: ['onyx', 'agate', 'semi precious'] },
-  { id: 'p-007', name: 'Quartzite', slug: 'quartzite', category: 'natural-stones', imageKeys: ['quartz', 'rainforest', 'wonder marble'] },
-  { id: 'p-008', name: 'Slate Stone', slug: 'slate-stone', category: 'natural-stones', imageKeys: ['slate', 'basalt', 'black limestone'] },
-
   { id: 'p-009', name: 'Marble Blocks', slug: 'marble-blocks', category: 'marble-architectural-products', imageKeys: ['marble', 'block', 'makrana'] },
   { id: 'p-010', name: 'Marble Wall Cladding', slug: 'marble-wall-cladding', category: 'marble-architectural-products', imageKeys: ['wall cladding', 'cladding', 'inlay'] },
   { id: 'p-011', name: 'Marble Jali', slug: 'marble-jali', category: 'marble-architectural-products', imageKeys: ['jali', 'inlay', 'pillar'] },
