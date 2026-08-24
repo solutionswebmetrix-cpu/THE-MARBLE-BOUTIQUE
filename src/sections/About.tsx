@@ -32,7 +32,7 @@ export default function About() {
           {/* Gold frame */}
           <div className="pointer-events-none absolute -inset-3 -z-10 border border-[#c8a646]/30" />
           {/* Floating stat card */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function About() {
           >
             <p className="font-heading text-3xl text-[#c8a646]">20+</p>
             <p className="font-button text-[10px] tracking-widest uppercase text-[#111111]/60">Years of Craft</p>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Text */}
@@ -61,7 +61,7 @@ export default function About() {
           <div className="mt-6 space-y-4 font-body text-sm leading-relaxed text-[#111111]/70 md:text-base">
             <p>
               THE MARBLE BOUTIQUE is a manufacturer and supplier of premium Indian Marble, Imported
-              Marble, Italian Marble, Granite, Slabs, Temple Stones, House Mandirs, Fireplaces,
+              Marble, Italian Marble, Granite, Slabs, Stones, Temple, House Mandirs, Fireplaces,
               Table Tops, Water Fountains, Wash Basins, Bath Tubs, Flower Vases, and customized
               carved marble products.
             </p>
@@ -73,7 +73,7 @@ export default function About() {
           </div>
 
           <div className="mt-8 grid grid-cols-2 gap-4">
-            {['Premium Manufacturing', 'Imported & Italian Marble', 'Custom Carved Pieces', 'Architectural Solutions'].map((f) => (
+            {['Premium Manufacturing', 'Indian, Imported, Italian Marble', 'Custom Carved Pieces', 'Architectural Solutions'].map((f) => (
               <div key={f} className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#c8a646]" />
                 <span className="font-body text-xs text-[#111111]/75">{f}</span>
